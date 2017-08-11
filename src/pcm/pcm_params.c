@@ -1942,7 +1942,7 @@ static const snd_mask_t refine_masks[SND_PCM_HW_PARAM_LAST_MASK - SND_PCM_HW_PAR
 		.bits = { 0x1f },
 	},
 	[SND_PCM_HW_PARAM_FORMAT - SND_PCM_HW_PARAM_FIRST_MASK] = {
-		.bits = { 0x81ffffff, 0xfff},
+		.bits = { 0x81ffffff, 0x1f0fff},
 	},
 	[SND_PCM_HW_PARAM_SUBFORMAT - SND_PCM_HW_PARAM_FIRST_MASK] = {
 		.bits = { 0x1 },
