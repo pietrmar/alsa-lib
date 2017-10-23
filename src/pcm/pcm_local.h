@@ -1008,7 +1008,14 @@ const snd_config_t *snd_pcm_rate_get_default_converter(snd_config_t *root);
 	 (1U << (SND_PCM_FORMAT_U18_3LE - 32)) | \
 	 (1U << (SND_PCM_FORMAT_S18_3BE - 32)) | \
 	 (1U << (SND_PCM_FORMAT_U18_3BE - 32))) }
-	
+
+#define SND_PCM_FMTBIT_DSD \
+	{ (0), \
+	((1U << (SND_PCM_FORMAT_DSD_U8  - 32)) | \
+	 (1U << (SND_PCM_FORMAT_DSD_U16_LE - 32 )) | \
+	 (1U << (SND_PCM_FORMAT_DSD_U32_LE - 32 )) | \
+	 (1U << (SND_PCM_FORMAT_DSD_U16_BE - 32 )) | \
+	 (1U << (SND_PCM_FORMAT_DSD_U32_BE - 32 ))) }
 
 #define SND_PCM_FMTBIT_FLOAT \
 	{ ((1U << SND_PCM_FORMAT_FLOAT_LE) | \
