@@ -448,7 +448,11 @@ static int snd_pcm_route_hw_refine_cprepare(snd_pcm_t *pcm ATTRIBUTE_UNUSED, snd
 {
 	int err;
 	snd_pcm_access_mask_t access_mask = { SND_PCM_ACCBIT_SHM };
+
 	snd_pcm_format_mask_t format_mask = { SND_PCM_FMTBIT_LINEAR };
+	snd_pcm_format_mask_t dsd_mask = { SND_PCM_FMTBIT_DSD };
+	snd_mask_union(&format_mask, &dsd_mask);
+
 	err = _snd_pcm_hw_param_set_mask(params, SND_PCM_HW_PARAM_ACCESS,
 					 &access_mask);
 	if (err < 0)
